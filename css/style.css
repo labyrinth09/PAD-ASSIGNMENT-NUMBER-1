@@ -1,0 +1,29 @@
+body {
+  font-weight: 500;
+}
+#heading{
+  color: white;
+}
+
+#header {
+  top: 0px;
+  height: 50px;
+  margin-top: -6px;
+}
+
+#sidenav {
+  position: absolute;
+  top:0px;
+  margin-left:10px;
+}
+#dropdown1{
+  position:absolute;
+  top:3px;
+  right:30px;
+}
+#th{
+  color: white;
+}
+.form {
+  color: black;
+}

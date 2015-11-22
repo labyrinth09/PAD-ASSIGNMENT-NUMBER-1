@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- Anna-Mae Caitlin A. Fernandez -->
+<!-- Sources: http://www.w3schools.com/angular/tryit.asp?filename=try_ng_todo_app -->
+<html>
+<head>
+	<title>Manage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- linking of stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- linking of the AngularJS library -->
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/shared/angular.min.js"></script>
+</head>
+
+<body ng-app="TaskApp" ng-controller="MainController">
+  <div id="header" class="card-panel green darken-2">
+    <div class="container">
+      <div id=dropdown1 class="row">
+    <a class="green lighten-1 dropdown-button btn" data-hover="true" href="#"
+    data-activates="dropdown"><i class="mdi-navigation-arrow-drop-down right">
+    </i>Boards</a>
+
+    <ul id="dropdown" class="dropdown-content">
+      <li><a href="#">New</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Recent</a></li>
+      <li class="divider"></li>
+      <li><a href="#">All</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="sidenav">
+	<ul id="slide-out" class="grey lighten-5 side-nav full">
+		<li><a href="#!">Profile</a></li>
+		<li><a href="#!">Friends</a></li>
+	</ul>
+
+	<a href="#" data-activates="slide-out" class=" button-collapse">
+		<i class="small mdi-navigation-menu"></i>
+	</a>
+
+</div>
+</div>
+<br>
+
+	 <div class="container">
+		   <div class="row" id="th" >
+
+			      <div class="z-depth-1 red col s4 m4 l3
+            offset-l1 center-align"><span class="flow-text">To Do</span></div>
+            <div class="z-depth-1 yellow col s4 m4 l3 
+            offset-l1 center-align"><span class="flow-text">In Progress</span>
+            </div>
+            <div class="z-depth-1 green col s4 m4 l3
+            offset-l1 center-align"><span class="flow-text">Done</span></div>
+       </div>
+
+       <div class="row">
+        <div class="col s4 m4 l3 offset-l1">
+          <div class="card green darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">New Tasks:</span>
+              <div>
+                <form ng-submit="addTask1()">
+                  <input type="text" ng-model="input_text1" size="50" placeholder="Add New">
+                  <input class="form" type="submit" value="Add New">
+                </form>
+              <br>
+              <div ng-repeat="x in tasklist1">
+                <div class="chip">
+                  <span ng-bind="x.task1"></span>
+                  <i class="material-icons">x</i>
+                </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 m4 l3 offset-l1">
+              <div class="card green darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">On Going Tasks:</span>
+                  <div>
+                    <form ng-submit="addTask2()">
+                      <input type="text" ng-model="input_text2" size="50" placeholder="Add New">
+                      <input class="form" type="submit" value="Add New">
+                    </form>
+                  <br>
+                  <div ng-repeat="x in tasklist2">
+                    <div class="chip">
+                      <span ng-bind="x.task2"></span>
+                      <i class="material-icons">x</i>
+                    </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s4 m4 l3 offset-l1">
+                  <div class="card green darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Finished Tasks:</span>
+                      <div>
+                        <form ng-submit="addTask3()">
+                          <input type="text" ng-model="input_text3" size="50" placeholder="Add New">
+                          <input class="form" type="submit" value="Add New">
+                        </form>
+                      <br>
+                      <div ng-repeat="x in tasklist3">
+                        <div class="chip">
+                          <span ng-bind="x.task3"></span>
+                          <i class="material-icons">x</i>
+                        </div>
+                        </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+   <footer>
+
+   </footer>
+
+	<!-- Linking of external JS files -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript"> $(".button-collapse").sideNav(); </script>
+
+  <!-- modules -->
+  <script src="js/app.js"></script>
+  <!-- controllers -->
+  <script src="js/controllers/MainController.js"></script>
+
+
+</body>
+</html>
